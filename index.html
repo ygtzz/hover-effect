@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>img hover</title>
+    <style>
+        .projects {
+            width:208px;
+            margin: 0px 0px 0px;
+            padding: 0;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #f1f1f1 #dadada #dadada #f1f1f1;
+            -webkit-box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, .05);
+            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, .05);
+        }
+        .projects-thumbnail {
+            position: relative;
+            margin: 0;
+            padding: 0px;
+        }
+        .projects:hover .project-thumbnail-overlay {
+            filter: alpha(opacity=50);
+            opacity: 0.5;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        .project-thumbnail-overlay {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: #000;
+            zoom: 1;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all 0.4s ease-in-out;
+            transition: all 0.4s ease-in-out;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .projects:hover .project-to-detail {
+            filter: alpha(opacity=80);
+            opacity: 0.8;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            pointer-events: auto;
+        }
+        .projects-thumbnail .project-to-detail {
+            background: url(./imgs/moke8.png) no-repeat scroll 0 0 transparent;
+            position: absolute;
+            z-index: 3;
+            width: 40px;
+            height: 40px;
+            overflow: visible;
+            line-height: 40px;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            top: 50%;
+            left: 50%;
+            margin: -20px 0px 0px -20px;
+            pointer-events: none;
+            filter: alpha(opacity=0);
+            opacity: 0;
+            -webkit-transform: scale(4);
+            transform: scale(4);
+            -webkit-transition: all 0.4s ease-in-out 0.2s;
+            transition: all 0.4s ease-in-out 0.2s;
+            -webkit-font-smoothing: antialiased;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            _filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="moke8/image/moke8.png");
+            _background: none;
+        }
+        .project-desc p.nofont a {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .project-desc p a {
+            color: #666666;
+        }
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+        .project-to-detail {
+            background: #49acd5;
+            color: #FFF;
+        }
+        .project-desc {
+            margin: 0;
+            padding: 8px;
+            text-align: center;
+            background-color: #FFFFFF;
+        }
+        .project-tax {
+            position: relative;
+            margin: 0;
+            padding: 8px;
+            text-align: center;
+            background: #fafafa;
+            font-size: 12px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <div class="projects">
+        <div class="projects-thumbnail">
+            <a href="http://www.moke8.com/dedecmsmb/m146297/" target="_blank">
+                <img src="http://www.moke8.com/data/attachment/block/e9/e9dd3389790276ef8186dea5aadbac30.jpg" width="206" height="160" alt="高端简洁设计感带手机端织梦模板">
+                <span class="project-thumbnail-overlay"></span>
+                <p class="project-to-detail"></p>
+            </a>
+        </div>
+        <div class="project-desc">
+            <p class="nofont"><a href="http://www.moke8.com/dedecmsmb/m146297/" target="_blank">高端简洁设计感带手机端织梦模板</a></p>
+        </div>
+        <div class="project-tax"><a href="http://www.moke8.com/dedecmsmb/" title="织梦模板" target="_blank">织梦模板</a> by moke</div>
+    </div>
+    <div>
+        出处：http://www.moke8.com/article-12767-1.html
+    </div>
+</body>
+</html>
