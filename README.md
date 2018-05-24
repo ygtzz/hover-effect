@@ -1,4 +1,4 @@
 ## hover-effect
 
 ### preview
-![img-hover](./readme/hover.png)
+![img-hover](./readme/hover.gif)
